@@ -10,4 +10,5 @@ export const Colors = {
   PINK_SECONDARY: "#FAE7F3",
   YELLOW: "#EBF400",
   ORANGE: "#FAA300",
+  RED_PRIMARY: "#DC3545",
 }
