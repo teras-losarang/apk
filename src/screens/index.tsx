@@ -5,6 +5,7 @@ import ProfileScreen from "./ProfileScreen"
 import WhitelistScreen from "./WhitelistScreen"
 import StoreScreen from "./StoreScreen"
 import StoreDetailScreen from "./StoreDetailScreen"
+import OrderScreen from "./OrderScreen"
 
 export {
   HomeScreen,
@@ -14,4 +15,5 @@ export {
   WhitelistScreen,
   StoreScreen,
   StoreDetailScreen,
+  OrderScreen
 }
