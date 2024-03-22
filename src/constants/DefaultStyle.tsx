@@ -69,5 +69,12 @@ export const DefaultStyle = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     backgroundColor: Colors.WHITE
+  },
+  defaultBtnOutlineSecondary: {
+    borderWidth: 1,
+    borderColor: Colors.GREY_THIRD,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    backgroundColor: Colors.WHITE
   }
 })

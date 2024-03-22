@@ -76,7 +76,7 @@ const HomeScreen = ({ navigation }: any) => {
           data={[...new Array(6).keys()]}
           scrollAnimationDuration={1000}
           renderItem={({ index }) => (
-            <Image source={{ uri: 'https://loremflickr.com/cache/resized/8055_8425421325_b62fa9edff_n_315_165_nofilter.jpg' }} style={{ height: '100%', width: '100%' }} />
+            <Image source={require('../assets/img/menu/food.png')} style={{ height: '100%', width: '100%' }} />
           )}
         />
 
@@ -99,7 +99,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ScrollView horizontal={true}>
             {[0, 1, 2, 3, 4, 5, 6].map(number => (
               <TouchableOpacity style={styles.headerContent} key={number}>
-                <Image source={{ uri: 'https://loremflickr.com/cache/resized/8055_8425421325_b62fa9edff_n_315_165_nofilter.jpg' }} style={{ width: 110, height: 110 }} />
+                <Image source={require('../assets/img/menu/food.png')} style={{ width: 110, height: 110 }} />
                 <Text style={[styles.headerContentTitle, { textAlign: 'center' }]}>Ayam Geprek</Text>
                 <View style={{ flexDirection: 'row', gap: 5, justifyContent: 'center', alignItems: 'center' }}>
                   <Text style={{ color: Colors.BLUE_PRIMARY, fontSize: 12 }}>Rp</Text>
@@ -123,7 +123,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ScrollView horizontal={true}>
             {[0, 1, 2, 3, 4, 5, 6].map(number => (
               <TouchableOpacity style={styles.headerContent} key={number} onPress={() => navigation.navigate('StoreDetailScreen')}>
-                <Image source={{ uri: 'https://loremflickr.com/cache/resized/8055_8425421325_b62fa9edff_n_315_165_nofilter.jpg' }} style={{ width: 110, height: 110 }} />
+                <Image source={require('../assets/img/menu/food.png')} style={{ width: 110, height: 110 }} />
                 <Text style={styles.headerContentTitle}>Me Gacoan Enak Banget Loh</Text>
               </TouchableOpacity>
             ))}
@@ -143,7 +143,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ScrollView horizontal={true}>
             {[0, 1, 2, 3, 4, 5, 6].map(number => (
               <TouchableOpacity style={styles.headerContent} key={number} onPress={() => navigation.navigate('StoreDetailScreen')}>
-                <Image source={{ uri: 'https://loremflickr.com/cache/resized/8055_8425421325_b62fa9edff_n_315_165_nofilter.jpg' }} style={{ width: 110, height: 110 }} />
+                <Image source={require('../assets/img/menu/food.png')} style={{ width: 110, height: 110 }} />
                 <Text style={styles.headerContentTitle}>Me Gacoan Enak Banget Loh</Text>
               </TouchableOpacity>
             ))}

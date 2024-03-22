@@ -270,7 +270,7 @@ const StoreDetailScreen = ({ navigation, route }: any) => {
               borderRadius: 10
             }
           ]}>
-            <Text style={{ textAlign: 'center', fontWeight: '600', fontSize: 16 }}>Tambah ke Keranjang</Text>
+            <Text style={{ textAlign: 'center', fontWeight: '600', fontSize: 16, color: Colors.WHITE }}>Tambah ke Keranjang</Text>
           </TouchableOpacity>
         </View>
       </ActionSheet>
