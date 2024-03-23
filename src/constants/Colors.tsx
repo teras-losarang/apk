@@ -11,4 +11,5 @@ export const Colors = {
   YELLOW: "#EBF400",
   ORANGE: "#FAA300",
   RED_PRIMARY: "#DC3545",
+  GREEN_PRIMARY: "#00AA5B",
 }

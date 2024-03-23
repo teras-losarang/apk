@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CartScreen, HistoryScreen, HomeScreen, MapScreen, OrderScreen, ProfileScreen, StoreDetailScreen, StoreScreen, WhitelistScreen } from '../screens';
+import { CallScreen, CartScreen, HistoryScreen, HomeScreen, MapScreen, OrderScreen, PaymentScreen, ProfileScreen, RouteScreen, StoreDetailScreen, StoreScreen, WhitelistScreen } from '../screens';
 import BottomNavigator from '../components/BottomNavigator';
 
 const Tab = createBottomTabNavigator()
@@ -27,6 +27,9 @@ const Routes = () => {
       <Stack.Screen name='StoreDetailScreen' component={StoreDetailScreen} options={{ headerShown: false }} />
       <Stack.Screen name='OrderScreen' component={OrderScreen} options={{ headerShown: false }} />
       <Stack.Screen name='MapScreen' component={MapScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='PaymentScreen' component={PaymentScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='RouteScreen' component={RouteScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='CallScreen' component={CallScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }

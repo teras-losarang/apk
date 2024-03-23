@@ -4,7 +4,7 @@ import { DefaultStyle } from '../constants/DefaultStyle'
 import { Colors } from '../constants/Colors'
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
-const CartScreen = (navigation: any) => {
+const CartScreen = ({ navigation }: any) => {
   return (
     <View style={DefaultStyle.defaultContainer}>
       <StatusBar translucent={true} backgroundColor={'transparent'} barStyle={'dark-content'} />
@@ -14,7 +14,7 @@ const CartScreen = (navigation: any) => {
 
       <ScrollView contentContainerStyle={[DefaultStyle.defaultPaddingHorizontal, { paddingBottom: 90, paddingTop: 10, gap: 10 }]}>
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(number => (
-          <View style={{ gap: 10 }}>
+          <View style={{ gap: 10 }} key={number}>
             <View style={[DefaultStyle.defaultNeumorphicBox, { gap: 15 }]}>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
@@ -46,7 +46,9 @@ const CartScreen = (navigation: any) => {
                   <Text style={{ color: Colors.BLACK }}>Total :</Text>
                   <Text style={{ color: Colors.BLUE_PRIMARY, marginLeft: 5 }}>Rp 25.000</Text>
                 </View>
-                <TouchableOpacity style={DefaultStyle.defaultBtnPrimary}>
+                <TouchableOpacity style={DefaultStyle.defaultBtnPrimary} onPress={() => {
+                  navigation.navigate('OrderScreen')
+                }}>
                   <Text style={{ color: Colors.WHITE }}>Checkout</Text>
                 </TouchableOpacity>
               </View>
@@ -99,7 +101,9 @@ const CartScreen = (navigation: any) => {
                   <Text style={{ color: Colors.BLACK }}>Total :</Text>
                   <Text style={{ color: Colors.BLUE_PRIMARY, marginLeft: 5 }}>Rp 25.000</Text>
                 </View>
-                <TouchableOpacity style={DefaultStyle.defaultBtnPrimary}>
+                <TouchableOpacity style={DefaultStyle.defaultBtnPrimary} onPress={() => {
+                  navigation.navigate('OrderScreen')
+                }}>
                   <Text style={{ color: Colors.WHITE }}>Checkout</Text>
                 </TouchableOpacity>
               </View>

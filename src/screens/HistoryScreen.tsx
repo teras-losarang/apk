@@ -4,7 +4,7 @@ import { DefaultStyle } from '../constants/DefaultStyle'
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import { Colors } from '../constants/Colors';
 
-const HistoryScreen = (navigation: any) => {
+const HistoryScreen = ({ navigation }: any) => {
   return (
     <View style={DefaultStyle.defaultContainer}>
       <StatusBar translucent={true} backgroundColor={'transparent'} barStyle={'dark-content'} />
@@ -19,7 +19,7 @@ const HistoryScreen = (navigation: any) => {
               <Text style={{ color: Colors.GREY, fontSize: 14 }}>129092029190291819</Text>
               <Text style={{ color: Colors.GREY, fontSize: 12 }}>6 Mar 2024</Text>
             </View>
-            <TouchableOpacity style={styles.cardStore}>
+            <TouchableOpacity style={styles.cardStore} onPress={() => navigation.navigate('StoreDetailScreen')}>
               <Text style={styles.cardTitle}>Me Gacoan</Text>
               <MaterialIcons name="arrow-forward-ios" size={12} color={Colors.GREY} />
             </TouchableOpacity>

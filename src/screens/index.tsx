@@ -7,6 +7,9 @@ import StoreScreen from "./StoreScreen"
 import StoreDetailScreen from "./StoreDetailScreen"
 import OrderScreen from "./OrderScreen"
 import MapScreen from "./MapScreen"
+import PaymentScreen from "./PaymentScreen"
+import RouteScreen from "./RouteScreen"
+import CallScreen from "./CallScreen"
 
 export {
   HomeScreen,
@@ -17,5 +20,8 @@ export {
   StoreScreen,
   StoreDetailScreen,
   OrderScreen,
-  MapScreen
+  MapScreen,
+  PaymentScreen,
+  RouteScreen,
+  CallScreen
 }
