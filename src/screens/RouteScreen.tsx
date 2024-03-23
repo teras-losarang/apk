@@ -28,25 +28,16 @@ const RouteScreen = ({ navigation }: any) => {
           <MaterialIcons name="near-me" size={20} color={Colors.BLACK} />
         </TouchableOpacity>
       </View>
-      <MapboxGL.MapView style={{ flex: 1 }} zoomEnabled={true} rotateEnabled={true}>
-        <MapboxGL.Camera defaultSettings={{
-          centerCoordinate: [112.5959133, -7.4315367],
-          zoomLevel: 10,
-          animationMode: 'flyTo',
-          animationDuration: 6000
-        }} />
-        <MapboxGL.PointAnnotation id='market' coordinate={[112.5959133, -7.4315367]} />
-        <MapboxGL.PointAnnotation id='market' coordinate={[112.5959133, -7.6315367]} />
-      </MapboxGL.MapView>
-      <View style={{ position: 'absolute', bottom: 20, width: '100%' }}>
+      <View style={{ position: 'absolute', bottom: 20, width: '100%', zIndex: 9 }}>
         <TouchableOpacity onPress={() => {
-          actionDetailOrder.current?.show()
+          navigation.navigate("DetailOrderScreen")
+          // actionDetailOrder.current?.show()
         }} style={[DefaultStyle.defaultBtnPrimary, { marginHorizontal: 20, paddingHorizontal: 15, paddingVertical: 10, borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }]}>
           <Text style={{ color: Colors.WHITE, fontSize: 14 }}>Detail Pesanan</Text>
           <Text style={{ color: Colors.WHITE, fontSize: 16, fontWeight: '600' }}>Rp 100.000</Text>
         </TouchableOpacity>
       </View>
-      <ActionSheet ref={actionDetailOrder} gestureEnabled>
+      <ActionSheet ref={actionDetailOrder} gestureEnabled containerStyle={{ zIndex: 9 }}>
         <ScrollView style={{ padding: 20 }}>
           <Text style={{ color: Colors.BLACK, fontWeight: '600', fontSize: 16 }}>Detail Pesanan</Text>
           <View style={[styles.divider]}></View>
@@ -71,7 +62,7 @@ const RouteScreen = ({ navigation }: any) => {
               </View>
               <View>
                 <TouchableOpacity style={{ backgroundColor: Colors.GREEN_PRIMARY, padding: 10, borderRadius: 50 }} onPress={() => {
-                  navigation.navigate("CallScreen")
+                  navigation.navigate("ChatScreen")
                 }}>
                   <MaterialIcons name="chat" size={16} color={Colors.WHITE} />
                 </TouchableOpacity>
@@ -109,16 +100,32 @@ const RouteScreen = ({ navigation }: any) => {
             <Text style={{ color: Colors.BLACK, fontSize: 12, fontWeight: '600' }}>Rp 100.000</Text>
           </View>
           <View style={[styles.divider]}></View>
+          <Text style={{ color: Colors.BLACK, fontWeight: '600', fontSize: 14, marginBottom: 10 }}>Metode Pembayaran  :</Text>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Text style={{ color: Colors.BLACK, fontSize: 12, fontWeight: '600' }}>ShopeePay</Text>
+          </View>
+          <View style={[styles.divider]}></View>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <TouchableOpacity style={[DefaultStyle.defaultBtnOutlinePrimary, { borderRadius: 10, paddingHorizontal: 20, paddingVertical: 10 }]}>
               <Text style={{ color: Colors.BLUE_PRIMARY, fontSize: 14 }}>Ajukan Pengembalian</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[DefaultStyle.defaultBtnPrimary, { borderRadius: 10, paddingHorizontal: 20, paddingVertical: 10 }]}>
+            <TouchableOpacity style={[DefaultStyle.defaultBtnPrimary, { borderRadius: 10, paddingHorizontal: 20, paddingVertical: 10 }]} onPress={() => navigation.navigate('EvaluationScreen')}>
               <Text style={{ color: Colors.WHITE, fontSize: 14 }}>Kasih Penilaian</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
       </ActionSheet>
+
+      <MapboxGL.MapView style={{ flex: 1 }} zoomEnabled={true} rotateEnabled={true}>
+        <MapboxGL.Camera defaultSettings={{
+          centerCoordinate: [112.5959133, -7.4315367],
+          zoomLevel: 10,
+          animationMode: 'flyTo',
+          animationDuration: 6000
+        }} />
+        <MapboxGL.PointAnnotation id='market' coordinate={[112.5959133, -7.4315367]} />
+        <MapboxGL.PointAnnotation id='market' coordinate={[112.5959133, -7.6315367]} />
+      </MapboxGL.MapView>
     </View>
   )
 }

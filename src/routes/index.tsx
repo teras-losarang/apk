@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CallScreen, CartScreen, HistoryScreen, HomeScreen, MapScreen, OrderScreen, PaymentScreen, ProfileScreen, RouteScreen, StoreDetailScreen, StoreScreen, WhitelistScreen } from '../screens';
+import { CallScreen, CartScreen, ChatScreen, DetailOrderScreen, EvaluationScreen, HistoryScreen, HomeScreen, MapScreen, OrderScreen, PaymentScreen, ProfileScreen, RouteScreen, StoreDetailScreen, StoreScreen, WhitelistScreen } from '../screens';
 import BottomNavigator from '../components/BottomNavigator';
 
 const Tab = createBottomTabNavigator()
@@ -30,6 +30,9 @@ const Routes = () => {
       <Stack.Screen name='PaymentScreen' component={PaymentScreen} options={{ headerShown: false }} />
       <Stack.Screen name='RouteScreen' component={RouteScreen} options={{ headerShown: false }} />
       <Stack.Screen name='CallScreen' component={CallScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='ChatScreen' component={ChatScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='EvaluationScreen' component={EvaluationScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='DetailOrderScreen' component={DetailOrderScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }

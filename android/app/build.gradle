@@ -91,7 +91,7 @@ android {
         }
 		release {
 			storeFile file('teras.keystore')
-			storePassword 'Teras123'
+			storePassword 'Teras123!'
 			keyAlias 'teras'
 			keyPassword 'Teras123!'
 		}
